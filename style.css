@@ -13,6 +13,7 @@
     max-width: 1440px;
     min-width: 320px;
     margin: auto;
+    height: auto;
 }
 
 *:focus { 
@@ -402,7 +403,6 @@ img
     height: auto;
     margin: 10px 0px;
     border-radius: 8px;
-    padding-top: 12px;
     background-color: white;
     justify-content: center;
     align-self: center;
@@ -508,7 +508,6 @@ img
 .services_cards .p{
   font-size: 4.5vw;
   font-weight: 500;
-  margin-top: 20px;
 }
 
 .services_cards .button
@@ -833,8 +832,8 @@ button.send.disabled {
 
   .about_container
   {
-      flex-direction: row;
-      justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .ac_1
@@ -883,34 +882,40 @@ button.send.disabled {
     border-radius: 10px;
 }
 
-  .services_container
-  {
-      flex-direction: row;
-      align-items: center;
-      height: 95vh;
-  }
-  .services_cards
-  {
-    align-self: auto;
-    width: 30%;
-    height: 55%;
-    justify-content: space-between;
-  }
+.services_container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: auto;
+  padding: 5% 2%;
+  background-color: #c5b3a3;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.services_cards {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 26rem;
+  max-height: 45rem;
+}
 
    .services_cards .p {
   font-size: clamp(0.9rem, 3vw, 2rem);
-  padding: 0 12%;
   }
 
  
   .card {
   position: relative;
   width: 100%;
-  height: 30vh;
+  height: auto;
   aspect-ratio: .8 / 0.7;
   border-radius: 8px;
   cursor: pointer;
   } 
+
   .content h2 {
     font-size: clamp(1rem, 1.5vw + 0.5rem, 2.5rem);
   }
@@ -931,6 +936,14 @@ button.send.disabled {
   .image-box
   {
       width: 100%;
+      height: auto;
+  }
+
+  .p {
+    display: flex ;
+    align-items: center;
+    margin: 0rem .2rem;
+    height: 8rem;
   }
 
   .services_cards .button 
